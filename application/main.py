@@ -5,7 +5,7 @@ import settings
 from models import init_db
 from models.section import add_new_section
 from models.product import add_product_by_name_section
-
+import secrets
 
 def parse_args():
     """Парсер для аргумента --token"""
@@ -19,7 +19,7 @@ def main():
     """Start the application."""
     logger.info('application run')
     # args = parse_args()
-    bot = Bot(settings.TOKEN, settings.GROUP_ID)
+    bot = Bot(secrets.TOKEN, secrets.GROUP_ID)
     bot.run()
 
 
