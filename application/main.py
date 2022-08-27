@@ -30,6 +30,7 @@ def fill_db():
         add_product_by_name_section(**new_product)
 
 
+
 if __name__ == '__main__':
     init_db()
     fill_db()
