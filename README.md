@@ -20,7 +20,10 @@
         1. cd application
         2. python3 main.py --token=a8..c --group_id=1111
             где a8..c - ваш токен, 1111 - id группы
-
+# Запуск тестов:
+    1. cd application
+    2. pytest tests.py
+    
 # Пояснение к структуре:
     application (Папка с проектом)
        |---> bot (Логика бота)
@@ -43,7 +46,9 @@
        |--> main.py (Основной файл запуска)
        |--> settings.py (Файл с настройками и сценарием)
        |--> secrets.py (Файл с токеном и id группы) ***Необходимо создать
-       |--> requirements.txt (Файл с зависимостями)
+       |--> tests.py (Файл с тестами) 
+       bot_work_illustrations (Фотографии для README.md)
+       requirements.txt (Файл с зависимостями)
        README.md (сейчас тут)
        
 # Иллюстрация работы бота:
