@@ -48,7 +48,7 @@
        
 # Иллюстрация работы бота:
     Команда /help
-![/help](https://github.com/Alset-Nikolas/vk-bot-bakery/blob/main/bot_work_illustrations/backery_cake_back.PNG) 
+![/help](bot_work_illustrations/help.png) 
         
     Команда /bakery (Начало сценария /bakery)
 ![/bakery_step_1](bot_work_illustrations/bakery.png)
