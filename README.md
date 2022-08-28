@@ -46,5 +46,25 @@
        |--> requirements.txt (Файл с зависимостями)
        README.md (сейчас тут)
        
-       
- 
+# Иллюстрация работы бота:
+    Команда /help
+![alt text](bot_work_illustrations/help.png) 
+        
+    Команда /bakery (Начало сценария /bakery)
+![alt text](bot_work_illustrations/bakery.png)
+
+    Валидный проход по сценарию /bakery (Выбор раздела)
+![alt text](bot_work_illustrations/bakery_cake.png)
+
+    Валидный проход по сценарию /bakery (Выбор продукта)
+![alt text](bot_work_illustrations/backery_cake_end.png)
+
+    Не валидный проход по сценарию /bakery
+![alt text](bot_work_illustrations/backery_novalid.png)
+    
+    Нажатие на кнопку Выход /bakery
+![alt text](bot_work_illustrations/backery_fast_end.png)
+
+    Нажатие на кнопку Назад
+![alt text](bot_work_illustrations/backery_cake_back.png)
+    

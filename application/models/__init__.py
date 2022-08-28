@@ -53,7 +53,7 @@ class Product(Base):
 
 def init_db() -> None:
     logger.info("init data base")
-    import os
-    if os.path.exists(NAME_DB):
-        os.remove(NAME_DB)
+    # import os
+    # if os.path.exists(NAME_DB):
+    #     os.remove(NAME_DB)
     Base.metadata.create_all(engine)

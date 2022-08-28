@@ -85,7 +85,7 @@ SCENARIOS = {
                 "text": "Какой продукт вас интересует?",
                 "handler_response_text": None,
                 "handler_user_text": 'handlers_section',
-                'failure_text': 'Ошибка',
+                'failure_text': 'Пожалуйста, выберите из предложенных',
                 "keyboard": {
                     "items_handler": 'get_product_by_section',
                     "add_back_btn": True,
@@ -98,7 +98,7 @@ SCENARIOS = {
                 "text": None,
                 "handler_response_text": 'send_product_info',
                 "handler_user_text": 'handlers_product',
-                'failure_text': 'Ошибка',
+                'failure_text': 'Пожалуйста, выберите из предложенных',
                 "keyboard": None,
                 "next_step": None,
                 'jump_back_step': 'step1'
