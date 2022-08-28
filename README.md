@@ -48,23 +48,23 @@
        
 # Иллюстрация работы бота:
     Команда /help
-![alt text](bot_work_illustrations/help.png) 
+![/help](https://github.com/Alset-Nikolas/vk-bot-bakery/blob/main/bot_work_illustrations/backery_cake_back.PNG) 
         
     Команда /bakery (Начало сценария /bakery)
-![alt text](bot_work_illustrations/bakery.png)
+![/bakery_step_1](bot_work_illustrations/bakery.png)
 
     Валидный проход по сценарию /bakery (Выбор раздела)
-![alt text](bot_work_illustrations/bakery_cake.png)
+![/bakery_step_2](bot_work_illustrations/bakery_cake.png)
 
     Валидный проход по сценарию /bakery (Выбор продукта)
-![alt text](bot_work_illustrations/backery_cake_end.png)
+![/bakery_step_3](bot_work_illustrations/backery_cake_end.png)
 
     Не валидный проход по сценарию /bakery
-![alt text](bot_work_illustrations/backery_novalid.png)
+![/bakery_step_er](bot_work_illustrations/backery_novalid.png)
     
     Нажатие на кнопку Выход /bakery
-![alt text](bot_work_illustrations/backery_fast_end.png)
+![/bakery_step_exit](bot_work_illustrations/backery_fast_end.png)
 
     Нажатие на кнопку Назад
-![alt text](bot_work_illustrations/backery_cake_back.png)
+![/bakery_step_back](bot_work_illustrations/backery_cake_back.png)
     
