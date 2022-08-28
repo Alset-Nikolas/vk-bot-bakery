@@ -1,4 +1,3 @@
-import os
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session, relationship
 from sqlalchemy import (
@@ -7,16 +6,14 @@ from sqlalchemy import (
     Column,
     create_engine,
     ForeignKeyConstraint,
-    UniqueConstraint,JSON
+    JSON
 )
-from settings import PRODUCTS, SECTIONS
+from log import logger
 
 NAME_DB = "bakery.db"
 Base = declarative_base()
-# abs_path_file = os.path.abspath(__file__)[: -len("models.__inti__.py")]
 engine = create_engine(f"sqlite:///{NAME_DB}" + "?check_same_thread=False")
 session = Session(bind=engine)
-
 
 
 class UserState(Base):
@@ -26,6 +23,7 @@ class UserState(Base):
     scenario_name = Column(String, nullable=True)
     step_name = Column(String, nullable=True)
     context = Column(JSON, default=dict())
+
 
 class Section(Base):
     __tablename__ = "sections"
@@ -50,17 +48,12 @@ class Product(Base):
 
     __table_args__ = (
         ForeignKeyConstraint(["section_id"], ["sections.id"]),
-        # UniqueConstraint("type", "name", "user_id"),
     )
-
-    def __str__(self):
-        return f"name={self.name}, type={self.type}, value={self.value}"
 
 
 def init_db() -> None:
-    print("init data base")
-    # if os.path.exists(NAME_DB):
-    #     os.remove(NAME_DB)
+    logger.info("init data base")
+    import os
+    if os.path.exists(NAME_DB):
+        os.remove(NAME_DB)
     Base.metadata.create_all(engine)
-
-

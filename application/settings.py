@@ -1,8 +1,50 @@
 import os
+import typing
 
-DEFAULT_ANSWER = "Не знаю как на это ответить.\n" \
-                 "Напишите  /help"
-HELP_ANSWER = '''
+"""
+             Основной файл с настройками бота.
+       ______________________________________________
+        
+    DEFAULT_ANSWER: Ответ при ситуации вне наших сценариев
+    
+    HELP_ANSWER: Ответ рассказывающий как общаться с ботом
+    
+    INTENTS: Список словарей с ключевыми словами 'tokens' (по ним начинается сценарий)
+        Пояснения к структуре:
+         {
+            "name": "Название данного намерения",
+            "tokens": (Ключевые слова, на которые мы реагируем),
+            "scenario_name": "/Имя сценария",
+        }
+            
+    SCENARIOS: Сценарии по которым живет бот
+        Пояснения к структуре:
+        '/bakery: {                                        # Имя сценария (такое же у INTENTS[i]['scenario_name])':
+        "first_step": "step1",                             # Нужно начинать с шага 'step1'
+        "steps": {                                         # Шаги (2-у связные списки)
+            "step1": {                                     # Название шага
+                "text": "Какой раздел вас интересует?",    # Текст который мы отправим после команды пользователя /bakery
+                "handler_response_text": None,             # Если мы хотим отправить сложный текст и картинку, нужно написать
+                                                                        # обработчик 'handler_response_text'
+                "handler_user_text": None,                 # Обрабатчик входных данных от пользователя
+                'failure_text': None,                      # Если 'handler_user_text' вернет False выводим 'failure_text' 
+                                                                         #  и ждем валидного ответа
+                "keyboard": {                              #  Кнопки или None
+                    "items_handler": 'get_all_section',    #  Функиция которая даст список строк (кнопки)
+                    "add_back_btn": False,                 #  Нужна ли кнопка Назад
+                    "add_exit_btn": True,                  #  Нужна ли кнопка дострочного выхода     
+                },
+                "next_step": 'step2',                      #  Переход на следующий щаг (должен сущестововать) или None
+                'jump_back_step': None                     #  Переход на предыдущий щаг (должен сущестововать) или None
+            },
+        }
+    }...}
+    
+"""
+
+DEFAULT_ANSWER: str = "Не знаю как на это ответить.\n" \
+                      "Напишите  /help"
+HELP_ANSWER: str = '''
 Рад вас приветсвовать в этом чате.
 Сейчас я умею отвечать на команды :
 /bakery: Помжет найти вам интересующую продукцию
@@ -10,18 +52,16 @@ HELP_ANSWER = '''
 Общаюсь я с помошью клавиатуры. 
 '''
 
-INTENTS = [
+INTENTS: typing.List[typing.Dict] = [
     {
         "name": 'Информация о продукте',
-        "tokens": ("/start", "/bakery"),
+        "tokens": ("/start", "/bakery", 'bakery', 'shop'),
         "scenario_name": "/bakery",
-        "answer": None
     },
     {
         "name": 'Написать возможности бота',
-        "tokens": ("/help",),
+        "tokens": ("/help", "help", "sos"),
         "scenario_name": "/help",
-        "answer": None
     }
 ]
 SCENARIOS = {
@@ -36,6 +76,7 @@ SCENARIOS = {
                 "keyboard": {
                     "items_handler": 'get_all_section',
                     "add_back_btn": False,
+                    "add_exit_btn": True,
                 },
                 "next_step": "step2",
                 'jump_back_step': None
@@ -48,6 +89,7 @@ SCENARIOS = {
                 "keyboard": {
                     "items_handler": 'get_product_by_section',
                     "add_back_btn": True,
+                    "add_exit_btn": True,
                 },
                 "next_step": "step3",
                 'jump_back_step': None
@@ -72,7 +114,6 @@ SCENARIOS = {
                 "handler_response_text": None,
                 "handler_user_text": None,
                 'failure_text': None,
-                "image": None,
                 "keyboard": None,
                 "next_step": None,
                 'jump_back_step': None
