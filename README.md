@@ -59,11 +59,12 @@
     Валидный проход по сценарию /bakery (Выбор продукта)
 ![/bakery_step_3](bot_work_illustrations/backery_cake_end.png)
 
+
     Не валидный проход по сценарию /bakery
 ![/bakery_step_er](bot_work_illustrations/backery_novalid.png)
     
     Нажатие на кнопку Выход /bakery
-![/bakery_step_exit](bot_work_illustrations/backery_fast_end.png)
+![/bakery_step_exit](bot_work_illustrations/backery_exit.png)
 
     Нажатие на кнопку Назад
 ![/bakery_step_back](bot_work_illustrations/backery_cake_back.png)
