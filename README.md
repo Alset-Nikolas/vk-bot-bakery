@@ -9,28 +9,29 @@
     
     Для навигации использовать кнопки.
 # Запуск
-    1. Для запуска необходимо передать свой токен и id группы:
-        
+    1. git clone https://github.com/Alset-Nikolas/vk-bot-bakery.git
+
+    2. Для запуска необходимо передать свой токен и id группы:
         Вариант 1:
             1. Создать файл applicaton/secrets.py
             2. В файле 2 строки:
                 GROUP_ID: int = id группы
                 TOKEN: str = токен
         Вариант 2:
-            Запуск через терминал:
+            Запуск через терминал (передаем как параметры):
             1. cd application
             2. python3 main.py --token=a8..c --group_id=1111
                 где a8..c - ваш токен, 1111 - id группы
 
-    2. Нужно скачать зависимости:
-
+    3. Нужно скачать зависимости:
         Вариант 1:
             1. cd applicaton
             2. pip install -r requirements.txt
-        
         Вариант 2 (docker):
-            1. docker build -t docker_bot .
-            2. docker run probe_docker_bot 
+            1. cd applicaton
+            2. sudo docker build -t docker_bot .
+            3. sudo docker run probe_docker_bot 
+
 
 
 # Запуск тестов:
