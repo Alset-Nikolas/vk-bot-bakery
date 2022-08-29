@@ -56,7 +56,7 @@ HELP_ANSWER: str = '''
 INTENTS: typing.List[typing.Dict] = [
     {
         "name": 'Информация о продукте',
-        "tokens": ("/bakery", 'bakery'),
+        "tokens": ("/bakery", 'bakery', 'начать'),
         "scenario_name": "/bakery",
     },
     {
