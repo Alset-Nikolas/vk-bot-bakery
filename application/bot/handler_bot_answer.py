@@ -2,7 +2,6 @@ from models.product import get_info_product_by_id
 from models.user import get_state_user
 from models import UserState
 import typing
-from settings import START_BAKERY_IMAGE
 
 """
     Обработчики сложных ответов бота пользователю
