@@ -142,6 +142,7 @@ class Bot:
             if 'text' in params:
                 self.send_msg(params['text'], user_id, keyboard, attachment)
 
+
     def send_image(self, image_path: str) -> str:
         """
             Обработка сложного (через handler_bot_answer) ответа пользователю

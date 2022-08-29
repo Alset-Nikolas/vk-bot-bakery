@@ -44,10 +44,11 @@ import typing
 
 DEFAULT_ANSWER: str = "Не знаю как на это ответить.\n" \
                       "Напишите  /help"
+
 HELP_ANSWER: str = '''
 Рад вас приветсвовать в этом чате.
 Сейчас я умею отвечать на команды :
-/bakery: Помжет найти вам интересующую продукцию
+/bakery: Поможет найти вам интересующую продукцию
 /help: Напишу вам это же сообщение
 Общаюсь я с помошью клавиатуры. 
 '''
@@ -55,7 +56,7 @@ HELP_ANSWER: str = '''
 INTENTS: typing.List[typing.Dict] = [
     {
         "name": 'Информация о продукте',
-        "tokens": ("/start", "/bakery", 'bakery', 'shop'),
+        "tokens": ("/bakery", 'bakery'),
         "scenario_name": "/bakery",
     },
     {

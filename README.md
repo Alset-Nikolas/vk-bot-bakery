@@ -74,3 +74,8 @@
     Нажатие на кнопку Назад
 ![/bakery_step_back](bot_work_illustrations/backery_cake_back.png)
     
+# Иллюстрация сценария
+![/bakery_step_back](bot_work_illustrations/scenario.png)
+
+# Иллюстрация моделей БД
+![/bakery_step_back](bot_work_illustrations/models.png)
