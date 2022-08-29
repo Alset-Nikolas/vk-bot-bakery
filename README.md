@@ -19,16 +19,16 @@
                 TOKEN: str = токен
         Вариант 2:
             Запуск через терминал (передаем как параметры):
-            1. cd application
+            1. cd application/
             2. python3 main.py --token=a8..c --group_id=1111
                 где a8..c - ваш токен, 1111 - id группы
 
     3. Нужно скачать зависимости:
         Вариант 1:
-            1. cd applicaton
+            1. cd applicaton/
             2. pip install -r requirements.txt
         Вариант 2 (docker):
-            1. cd applicaton
+            1. cd applicaton/
             2. sudo docker build -t docker_bot .
             3. sudo docker run probe_docker_bot 
 
