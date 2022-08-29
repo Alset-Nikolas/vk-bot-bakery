@@ -9,17 +9,30 @@
     
     Для навигации использовать кнопки.
 # Запуск
-    Для запуска необходимо передать свой токен и id группы:
-    Вариант 1:
-        1. Создать файл applicaton/secrets.py
-        2. В файле 2 строки:
-            GROUP_ID: int = id группы
-            TOKEN: str = токен
-    Вариант 2:
-        Запуск через терминал команды:
-        1. cd application
-        2. python3 main.py --token=a8..c --group_id=1111
-            где a8..c - ваш токен, 1111 - id группы
+    1. Для запуска необходимо передать свой токен и id группы:
+        
+        Вариант 1:
+            1. Создать файл applicaton/secrets.py
+            2. В файле 2 строки:
+                GROUP_ID: int = id группы
+                TOKEN: str = токен
+        Вариант 2:
+            Запуск через терминал:
+            1. cd application
+            2. python3 main.py --token=a8..c --group_id=1111
+                где a8..c - ваш токен, 1111 - id группы
+
+    2. Нужно скачать зависимости:
+
+        Вариант 1:
+            1. cd applicaton
+            2. pip install -r requirements.txt
+        
+        Вариант 2 (docker):
+            1. docker build -t docker_bot .
+            2. docker run probe_docker_bot 
+
+
 # Запуск тестов:
     1. cd application
     2. pytest tests.py
