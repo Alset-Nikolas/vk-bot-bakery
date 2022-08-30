@@ -87,7 +87,9 @@
 
     Нажатие на кнопку Назад
 ![/bakery_step_back](bot_work_illustrations/backery_cake_back.png)
-    
+
+    Пример использования:
+![image](bot_work_illustrations/bot.gif))
 # Иллюстрация сценария
 ![/bakery_step_back](bot_work_illustrations/scenario.png)
 
